@@ -1,13 +1,288 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;700&display=swap');
+
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  font-family: 'Rubik', sans-serif; 
+  width: 100%;
+}
+
+#root {
+  display: flex;
+  flex-direction: row;
+  overflow: hidden;
+}
+
+.header {
+  width: 200px !important;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 1px 3px rgb(0 0 0 / 10%), 0 2px 2px rgb(0 0 0 / 6%),
+    0 0 2px rgb(0 0 0 / 7%);
+    background-color: #001352;
+}
+
+.brand img {
+  height: 150px;
+  margin-top: 15px;
+}
+
+.info {
+  margin: 0 5px;
+  text-shadow: 0 0.05rem 0.1rem rgba(0, 0, 0, 0.5);
+  box-shadow: inset 0 0 5rem rgba(0, 0, 0, 0.5);
+}
+
+.info,.footer {
+  text-align: center;
+  color: #eb5424;
+}
+
+.footer a {
+  font-size: 2rem;
+  color: #eb5424;
+}
+
+.footer a:hover {
+  color: #d0d2d3;
+}
+
+.footer p {
+  margin-bottom: 25px;
+  color: #d0d2d3;
+    font-weight: 300;
+    font-size: .9rem;
+    text-shadow: 0 0.05rem 0.1rem rgba(0, 0, 0, 0.5);
+    box-shadow: inset 0 0 5rem rgba(0, 0, 0, 0.5);
+}
+
+.content {
+  width: 100%;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.21), rgba(0, 0, 0, 0.21)),url('./assets/bgg.jpg');
+  background-color: #16214d;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size:cover;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.content h1 {
+  font-weight: 700;
+  color: #d0d2d3;
+  text-shadow: 0 0.05rem 0.1rem rgba(0, 0, 0, 0.5);
+  box-shadow: inset 0 0 5rem rgba(0, 0, 0, 0.5);
+  box-shadow: unset 0 1px 3px rgb(0 0 0 / 10%), 0 2px 2px rgb(0 0 0 / 6%),
+    0 0 2px rgb(0 0 0 / 7%);
+  margin-top: 10px;
+  padding: 5px;
+display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.content h4 {
+  width: calc(100vw - 200px);
+  font-weight: 700;
+  color: #d0d2d3;
+  text-shadow: 0 0.05rem 0.1rem rgba(0, 0, 0, 0.5);
+  box-shadow: inset 0 0 5rem rgba(0, 0, 0, 0.5);
+  margin-top: 5px;
+  padding: 5px;
+}
+
+.weather {
+  align-self: center;
+}
+
+.weatherContent {
+  width: calc(100vw - 200px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.location p {
+  width: calc(100vw - 200px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  line-height: 1.4;
+  font-weight: 700;
+  color: #eb5424;
+  text-shadow: 0 0.05rem 0.1rem rgba(0, 0, 0, 0.5);
+  box-shadow: inset 0 0 5rem rgba(0, 0, 0, 0.5);
+  margin-top: 30px;
+  padding: 2px;
+}
+
+.weatherSection {
+  width: calc(100vw - 200px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-top: 15px;
+  color: #d0d2d3;
+  text-shadow: 0 0.05rem 0.1rem rgba(0, 0, 0, 0.5);
+}
+
+.currentWeather {
+  width: 65%;
+  height: auto;
+  box-shadow: inset 0 0 5rem rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.weatherDesc p {
+  text-transform: capitalize;
+  margin-bottom: 10px;
+}
+
+.temp h2 {
+  font-weight: 700;
+  font-size: 4rem;
+  color: #eb5424;
+}
+
+.temp h2 span {
+  font-size: 1.5rem;
+  color: #d0d2d3;
+}
+
+.temp h5 {
+  font-size: 1.5rem;
+  color: #eb5424;
+}
+
+.temp h5 span {
+  font-size: 1rem;
+  color: #d0d2d3;
+}
+
+.currInfo {
+  margin-right: 10px;
+  font-weight: 300;
+  font-size: .85rem;
+}
+
+.dailyWeather {
+  width: calc(100vw - 200px);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-top: 20px;
+}
+
+.singleDaily {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: inset 0 0 5rem rgba(0, 0, 0, 0.5);
+  text-shadow: 0 0.05rem 0.1rem rgba(0, 0, 0, 0.5);
+  padding: 5px 0;
+  border-radius: 10px;
+  width: calc((100vw - 200px) / 9);
+}
+
+.singleDesc {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@media screen and (max-width: 500px) {
+  #root{
+    flex-direction: column;
+  }
+  .header {
+    width: 100% !important;
+    height: auto;
+    flex-direction: row;
+  }
+  .brand img {
+    height: 75px;
+    margin-top: 0;
+  }
+  .info {
+    font-size: 0.75rem;
+    color: #d0d2d3;
+    box-shadow: none;
+    margin-right: 20px;
+  }
+  .footer {
+    margin-right: 10px;
+  }
+  .footer a {
+    font-size: 1.5rem;
+  }
+  .footer p {
+    display: none;
+    font-size: .75rem;
+    color: #eb5424;
+  }
+  .content h4 {
+    width: 100% !important;
+    padding: 2px;
+    margin-top: 2px;
+  }
+  .content h1 {
+    width: 100% !important;
+    margin-top: 5px;
+    padding: 2px;
+  }
+  .weatherContent {
+    width: 100% !important;
+  }
+  .location p {
+    margin-top: 5px;
+    padding: 1px;
+    line-height: 1.1;
+  }
+  .weatherSection {
+    width: 100% !important;
+    margin-top: 5px;
+  }
+  .currentWeather {
+    width: 95% !important;
+  }
+  .currentWeather img {
+    height: 80px;
+  }
+  .weatherDesc p {
+    margin-bottom: 5px;
+  }
+  .temp h2 {
+    font-size: 3rem;
+  }
+  .temp h5 {
+    font-size: 1rem;
+  }
+  .temp h5 span {
+    font-size: 0.75rem;
+  }
+  .dailyWeather {
+    width: 100% !important;
+    flex-direction: column;
+    margin-top: 10px;
+  }
+  .singleDaily {
+    width: 65% !important;
+    margin-bottom: 5px;
+  }
 }
